@@ -83,9 +83,24 @@ function filterByCategory(category) {
   // clearWhiteOverlay(); // 暂时注释掉以排查问题
 }
 
-searchInput.addEventListener("input", () => {
+// --- Debounce Function ---
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// --- Search Function (extracted for clarity) ---
+function performSearch() {
   const searchTerm = searchInput.value.toLowerCase().trim();
 
+  // Reset active category button
   categoryNav.querySelectorAll("button").forEach((btn) => {
     btn.classList.remove("active");
   });
@@ -93,6 +108,7 @@ searchInput.addEventListener("input", () => {
     .querySelector('[data-category="all"]')
     .classList.add("active");
 
+  // Ensure all categories are potentially visible before filtering cards
   categories.forEach((cat) => {
     cat.classList.remove("hidden");
   });
@@ -101,9 +117,18 @@ searchInput.addEventListener("input", () => {
     linkCards.forEach((card) => {
       card.classList.remove("hidden-card");
       const title = card.querySelector("h3");
-      title.innerHTML = title.textContent;
+      // Restore original text if possible, or just remove mark
+      const originalText = card.dataset.originalTitle || title.textContent;
+      title.innerHTML = originalText; // Remove mark
+      card.dataset.originalTitle = originalText; // Store original title if not already stored
     });
     noResults.style.display = "none";
+    // Hide empty categories again if needed (though maybe not desirable when clearing search)
+    categories.forEach((category) => {
+      if (category.id !== "noResults" && !category.querySelector(".link-card:not(.hidden-card)")) {
+        // category.classList.add("hidden"); // Optional: hide empty categories on clear?
+      }
+    });
     return;
   }
 
@@ -111,7 +136,11 @@ searchInput.addEventListener("input", () => {
 
   linkCards.forEach((card) => {
     const title = card.querySelector("h3");
-    const titleText = title.textContent.toLowerCase();
+    // Store original title before highlighting
+    if (!card.dataset.originalTitle) {
+         card.dataset.originalTitle = title.textContent;
+    }
+    const titleText = card.dataset.originalTitle.toLowerCase(); // Search in original text
 
     if (titleText.includes(searchTerm)) {
       card.classList.remove("hidden-card");
@@ -121,34 +150,31 @@ searchInput.addEventListener("input", () => {
         `(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
         "gi"
       );
-      title.innerHTML = titleText.replace(regex, "<mark>$1</mark>");
+      // Highlight based on original text
+      title.innerHTML = card.dataset.originalTitle.replace(regex, "<mark>$1</mark>");
     } else {
       card.classList.add("hidden-card");
+      title.innerHTML = card.dataset.originalTitle; // Restore original text if hidden
     }
   });
 
+  // Hide categories that have no visible cards after search
   categories.forEach((category) => {
     if (category.id === "noResults") return;
-
-    const cards = category.querySelectorAll(".link-card");
-    let categoryHasVisibleCards = false;
-
-    cards.forEach((card) => {
-      if (!card.classList.contains("hidden-card")) {
-        categoryHasVisibleCards = true;
-      }
-    });
-
-    if (!categoryHasVisibleCards) {
+    // Check if any card within this category is NOT hidden
+    const hasVisibleCards = category.querySelector(".link-card:not(.hidden-card)");
+    if (!hasVisibleCards) {
       category.classList.add("hidden");
+    } else {
+      category.classList.remove("hidden"); // Ensure category is visible if it has results
     }
   });
 
   noResults.style.display = hasResults ? "none" : "block";
+}
 
-  // 清除可能的白色遮罩，只需调用一次
-  clearWhiteOverlay();
-});
+// --- Debounced Search Event Listener ---
+searchInput.addEventListener("input", debounce(performSearch, 300)); // Apply debounce with 300ms delay
 
 initTheme();
 
