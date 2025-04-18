@@ -22,7 +22,7 @@
 ## 🖥️ 预览
 
 *建议替换为项目实际截图*
-![WebNav Hub 预览](https://via.placeholder.com/800x400/111111/e82127?text=CreativeNav+Preview)
+![WebNav Hub 预览](demo.png)
 
 ## 🚀 部署指南
 
