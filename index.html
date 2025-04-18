@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="background-color: #111">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreativeNav - 创意导航</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body
+    style="background-color: var(--bg-main); background-image: none !important"
+  >
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">CreativeNav</h1>
+        <div class="top-controls">
+          <div class="search-bar">
+            <label for="searchInput" class="sr-only">搜索工具和资源</label>
+            <input type="text" id="searchInput" autocomplete="off" />
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-wrapper">
+      <nav class="navbar" id="categoryNav" aria-label="资源分类导航">
+        <!-- Remove old buttons and add new ones -->
+        <button class="active" data-category="all" tabindex="0">
+          <i class="fas fa-home" aria-hidden="true"></i>
+          <span>所有资源</span>
+        </button>
+        <button data-category="ai-search" tabindex="0">
+          <i class="fas fa-robot" aria-hidden="true"></i>
+          <span>Ai搜索</span>
+        </button>
+        <button data-category="social" tabindex="0">
+          <i class="fas fa-users" aria-hidden="true"></i>
+          <span>社交媒体</span>
+        </button>
+        <button data-category="tools" tabindex="0">
+          <i class="fas fa-toolbox" aria-hidden="true"></i>
+          <span>实用工具</span>
+        </button>
+        <button data-category="tech-news" tabindex="0">
+          <i class="fas fa-newspaper" aria-hidden="true"></i>
+          <span>科技资讯</span>
+        </button>
+        <button data-category="cloud-storage" tabindex="0">
+          <i class="fas fa-cloud" aria-hidden="true"></i>
+          <span>云存储</span>
+        </button>
+        <button data-category="email" tabindex="0">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>电子邮箱</span>
+        </button>
+      </nav>
+    </div>
+
+    <main
+      class="main"
+      style="
+        background-color: #111 !important;
+        background-image: none !important;
+        min-height: 100vh;
+      "
+    >
+      <div
+        class="container"
+        style="
+          background-color: #111 !important;
+          background-image: none !important;
+        "
+      >
+        <!-- Add new content sections here -->
+        <section id="ai-search" class="category">
+          <h2 class="category-title">
+            <i class="fas fa-robot" aria-hidden="true"></i>
+            Ai搜索
+          </h2>
+          <div class="resource-grid">
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://www.google.com"
+                target="_blank"
+                aria-label="Google"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-google" aria-hidden="true"></i>
+              </div>
+              <h3>Google</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://www.bing.com"
+                target="_blank"
+                aria-label="Bing"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+              </div>
+              <h3>Bing</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://openrouter.ai/"
+                target="_blank"
+                aria-label="openrouter"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-openid" aria-hidden="true"></i>
+              </div>
+              <h3>openrouter</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://websim.ai/"
+                target="_blank"
+                aria-label="websim"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              </div>
+              <h3>websim</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://chatgpt.com/"
+                target="_blank"
+                aria-label="chatgpt"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-google" aria-hidden="true"></i>
+              </div>
+              <h3>chatgpt</h3>
+            </div>
+            <div class="link-card" data-category="ai-search">
+              <a
+                href="https://www.doubao.com/chat/"
+                target="_blank"
+                aria-label="傻豆包"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-paw" aria-hidden="true"></i>
+              </div>
+              <h3>傻豆包</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://chat.qwen.ai/"
+                target="_blank"
+                aria-label="通义千问"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
+              </div>
+              <h3>通义千问</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://kimi.moonshot.cn/"
+                target="_blank"
+                aria-label="kimi"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-moon" aria-hidden="true"></i>
+              </div>
+              <h3>kimi</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://yiyan.baidu.com/"
+                target="_blank"
+                aria-label="文心一言"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-dumpster-fire" aria-hidden="true"></i>
+              </div>
+              <h3>文心一言</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://yuanbao.tencent.com/"
+                target="_blank"
+                aria-label="腾讯元宝"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+              <h3>腾讯元宝</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://aistudio.google.com/"
+                target="_blank"
+                aria-label="google AIstudio"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+              <h3>google AIstudio</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://gemini.google.com/"
+                target="_blank"
+                aria-label="gemini"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-google-plus" aria-hidden="true"></i>
+              </div>
+              <h3>gemini</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://build.nvidia.com/"
+                target="_blank"
+                aria-label="nvidia"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+              </div>
+              <h3>nvidia</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://claude.ai/"
+                target="_blank"
+                aria-label="claude"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+              <h3>claude</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://chat.chutes.ai/"
+                target="_blank"
+                aria-label="chutesai"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+              <h3>chutesai</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://mistral.ai/"
+                target="_blank"
+                aria-label="mistral"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              </div>
+              <h3>mistral</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a href="https://groq.com/" target="_blank" aria-label="groq"></a>
+              <div class="icon-wrapper">
+                <i
+                  class="fa-solid fa-group-arrows-rotate"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <h3>groq</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://www.medscape.com/"
+                target="_blank"
+                aria-label="medscape"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+              </div>
+              <h3>medscape</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://heck.ai/"
+                target="_blank"
+                aria-label="heck.ai"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
+              </div>
+              <h3>heck.ai</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://www.wenxiaobai.com/"
+                target="_blank"
+                aria-label="问小白"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-mask" aria-hidden="true"></i>
+              </div>
+              <h3>问小白</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://app.leonardo.ai/"
+                target="_blank"
+                aria-label="leonardo.ai绘图"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-images" aria-hidden="true"></i>
+              </div>
+              <h3>leonardo.ai绘图</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://huggingface.co/"
+                target="_blank"
+                aria-label="huggingface"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-face-rolling-eyes" aria-hidden="true"></i>
+              </div>
+              <h3>huggingface</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://lmarena.ai/"
+                target="_blank"
+                aria-label="lmarena"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+              <h3>lmarena</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://kelaode.ai/"
+                target="_blank"
+                aria-label="kelaode"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+              </div>
+              <h3>kelaode</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a href="https://x.ai/" target="_blank" aria-label="x.ai"></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </div>
+              <h3>x.ai</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://ascvdpce.186404.xyz/"
+                target="_blank"
+                aria-label="pce计算"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+              </div>
+              <h3>pce计算</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://t3.chat/"
+                target="_blank"
+                aria-label="t3.chat"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
+              </div>
+              <h3>t3.chat</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a href="https://v0.dev/" target="_blank" aria-label="v0"></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-v" aria-hidden="true"></i>
+              </div>
+              <h3>v0</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://www.deepseek.com/"
+                target="_blank"
+                aria-label="deepseek"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
+              </div>
+              <h3>deepseek</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://ai.dangbei.com/"
+                target="_blank"
+                aria-label="当贝AI"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
+              </div>
+              <h3>当贝AI</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://firebase.google.com/"
+                target="_blank"
+                aria-label="firebase.google"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+              </div>
+              <h3>firebase.google</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://www.beago.ai/"
+                target="_blank"
+                aria-label="beago.ai"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
+              </div>
+              <h3>beago.ai</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://sigmabrowser.com/chat"
+                target="_blank"
+                aria-label="sigmachat"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-rocketchat" aria-hidden="true"></i>
+              </div>
+              <h3>sigmachat</h3>
+            </div>
+            <div class="link-card" data-category="ai-search" tabindex="0">
+              <a
+                href="https://bolt.new/"
+                target="_blank"
+                aria-label="bolt.new"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+              </div>
+              <h3>bolt.new</h3>
+            </div>
+          </div>
+        </section>
+        <section id="social" class="category">
+          <h2 class="category-title">
+            <i class="fas fa-users" aria-hidden="true"></i>
+            社交媒体
+          </h2>
+          <div class="resource-grid">
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                aria-label="Facebook"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </div>
+              <h3>Facebook</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="Twitter"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+              </div>
+              <h3>Twitter</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://twitterxz.com/"
+                target="_blank"
+                aria-label="推特视频下载"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </div>
+              <h3>推特视频下载</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                aria-label="Instagram"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </div>
+              <h3>Instagram</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://render.com/"
+                target="_blank"
+                aria-label="render"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-draw-polygon" aria-hidden="true"></i>
+              </div>
+              <h3>render</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://deno.com/deploy"
+                target="_blank"
+                aria-label="deno"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-d" aria-hidden="true"></i>
+              </div>
+              <h3>deno</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://railway.com/"
+                target="_blank"
+                aria-label="railway"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-archway" aria-hidden="true"></i>
+              </div>
+              <h3>railway</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://vercel.com/"
+                target="_blank"
+                aria-label="vercel"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-v" aria-hidden="true"></i>
+              </div>
+              <h3>vercel</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://www.netlify.com/"
+                target="_blank"
+                aria-label="netlify"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-n" aria-hidden="true"></i>
+              </div>
+              <h3>netlify</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://www.tiktok.com"
+                target="_blank"
+                aria-label="TikTok"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+              </div>
+              <h3>TikTok</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://goingbus.com/"
+                target="_blank"
+                aria-label="爆米花视频"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-n" aria-hidden="true"></i>
+              </div>
+              <h3>爆米花视频</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://www.reddit.com"
+                target="_blank"
+                aria-label="Reddit"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-reddit" aria-hidden="true"></i>
+              </div>
+              <h3>Reddit</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://www.downloadyoutubesubtitles.com/"
+                target="_blank"
+                aria-label="油管字幕下载"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              </div>
+              <h3>油管字幕下载</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                aria-label="GitHub"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </div>
+              <h3>GitHub</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://www.y2mate.com/"
+                target="_blank"
+                aria-label="油管视频下载"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+              </div>
+              <h3>油管视频下载</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://youtube.iiilab.com/"
+                target="_blank"
+                aria-label="视频下载"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-download" aria-hidden="true"></i>
+              </div>
+              <h3>视频下载</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a href="https://suno.com/" target="_blank" aria-label="suno"></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-music" aria-hidden="true"></i>
+              </div>
+              <h3>suno</h3>
+            </div>
+            <div class="link-card" data-category="social" tabindex="0">
+              <a
+                href="https://mv.186404.xyz/"
+                target="_blank"
+                aria-label="电影导航"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-tv" aria-hidden="true"></i>
+              </div>
+              <h3>电影导航</h3>
+            </div>
+          </div>
+        </section>
+        <section id="tools" class="category">
+          <h2 class="category-title">
+            <i class="fas fa-toolbox" aria-hidden="true"></i>
+            实用工具
+          </h2>
+          <div class="resource-grid">
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://translate.google.com"
+                target="_blank"
+                aria-label="Google翻译"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-language" aria-hidden="true"></i>
+              </div>
+              <h3>Google翻译</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://d.186404.xyz/"
+                target="_blank"
+                aria-label="短链"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-link" aria-hidden="true"></i>
+              </div>
+              <h3>短链</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://dynv6.com/"
+                target="_blank"
+                aria-label="dynv6"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+              </div>
+              <h3>dynv6</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://fast.com/"
+                target="_blank"
+                aria-label="网速测试"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+              </div>
+              <h3>网速测试</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.cloudns.net/"
+                target="_blank"
+                aria-label="Cloudns"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+              </div>
+              <h3>Cloudns</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.cloudflare.com/zh-cn/"
+                target="_blank"
+                aria-label="Cloudflare"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              </div>
+              <h3>Cloudflare</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://ygpy.net/"
+                target="_blank"
+                aria-label="一个朋友"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+              </div>
+              <h3>一个朋友</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://notebooklm.google/"
+                target="_blank"
+                aria-label="谷歌笔记"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-book" aria-hidden="true"></i>
+              </div>
+              <h3>谷歌笔记</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://email.ml/"
+                target="_blank"
+                aria-label="临时邮箱"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <h3>临时邮箱</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.ahhhhfs.com/"
+                target="_blank"
+                aria-label="A姐"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-blog" aria-hidden="true"></i>
+              </div>
+              <h3>A姐</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a href="https://ip.sb/" target="_blank" aria-label="IP查询"></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <h3>IP查询</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://dns.he.net/"
+                target="_blank"
+                aria-label="dns.he域名托管"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+              </div>
+              <h3>dns.he域名托管</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.site.ac/"
+                target="_blank"
+                aria-label="Site域名转发"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-right-left" aria-hidden="true"></i>
+              </div>
+              <h3>Site域名转发</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://zh.go-to-library.sk/"
+                target="_blank"
+                aria-label="Z-Library"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-book-reader" aria-hidden="true"></i>
+              </div>
+              <h3>Z-Library</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://domain.digitalplat.org/"
+                target="_blank"
+                aria-label="us.kg域名"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+              </div>
+              <h3>us.kg域名</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.spaceship.com/zh/"
+                target="_blank"
+                aria-label="Spaceship廉价域名"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+              </div>
+              <h3>Spaceship廉价域名</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.cursor.so/"
+                target="_blank"
+                aria-label="cursor"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-i-cursor" aria-hidden="true"></i>
+              </div>
+              <h3>cursor</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://fontawesome.com/icons"
+                target="_blank"
+                aria-label="FontAwesome图标"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-icons" aria-hidden="true"></i>
+              </div>
+              <h3>FontAwesome图标</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://scamalytics.com/ip"
+                target="_blank"
+                aria-label="ip清洁度查询"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-icons" aria-hidden="true"></i>
+              </div>
+              <h3>ip清洁度查询</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://test-ipv6.com/"
+                target="_blank"
+                aria-label="test-ipv6"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-ethernet" aria-hidden="true"></i>
+              </div>
+              <h3>test-ipv6</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://html.zone/ip"
+                target="_blank"
+                aria-label="zone/ip"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-sourcetree" aria-hidden="true"></i>
+              </div>
+              <h3>zone/ip</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.lumiproxy.com/zh-hans/online-proxy/proxysite/"
+                target="_blank"
+                aria-label="免费网络代理"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-unlock" aria-hidden="true"></i>
+              </div>
+              <h3>免费网络代理</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://ipcheck.ing/"
+                target="_blank"
+                aria-label="ipcheck"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <h3>ipcheck</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://console.cron-job.org/"
+                target="_blank"
+                aria-label="定时任务cron-job"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-ethernet" aria-hidden="true"></i>
+              </div>
+              <h3>定时任务cron-job</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://uptimerobot.com/"
+                target="_blank"
+                aria-label="uptimerobot"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              </div>
+              <h3>uptimerobot</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://forwardemail.net/"
+                target="_blank"
+                aria-label="forwardemail"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-envelopes-bulk" aria-hidden="true"></i>
+              </div>
+              <h3>forwardemail</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://improvmx.com/"
+                target="_blank"
+                aria-label="improvmx"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-envelopes-bulk" aria-hidden="true"></i>
+              </div>
+              <h3>improvmx</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://gb.w404.nyc.mn/"
+                target="_blank"
+                aria-label="github文件加速"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </div>
+              <h3>github文件加速</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://hostry.com/"
+                target="_blank"
+                aria-label="hostryDNS域名托管"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+              </div>
+              <h3>hostryDNS域名托管</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.sitelutions.com/"
+                target="_blank"
+                aria-label="免费域名sitelutions"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+              </div>
+              <h3>免费域名sitelutions</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.changeip.com/"
+                target="_blank"
+                aria-label="免费域名changeip"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-satellite-dish" aria-hidden="true"></i>
+              </div>
+              <h3>免费域名changeip</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://dnsexit.com/"
+                target="_blank"
+                aria-label="免费域名dnsexit"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+              </div>
+              <h3>免费域名dnsexit</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.nslookup.io/"
+                target="_blank"
+                aria-label="DNS查找nslookup"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+              </div>
+              <h3>DNS查找nslookup</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://ping0.cc/"
+                target="_blank"
+                aria-label="ping0"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-fingerprint" aria-hidden="true"></i>
+              </div>
+              <h3>ping0</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://customer.l53.net/"
+                target="_blank"
+                aria-label="L53免费域名"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-fingerprint" aria-hidden="true"></i>
+              </div>
+              <h3>L53免费域名</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://tools.pdf24.org/"
+                target="_blank"
+                aria-label="PDF在线工具"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+              </div>
+              <h3>PDF在线工具</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="http://free-proxy.cz/en/"
+                target="_blank"
+                aria-label="free-proxy"
+              ></a>
+              <div class="icon-wrapper">
+                <i
+                  class="fa-brands fa-internet-explorer"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <h3>free-proxy</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.croxyproxy.rocks/_zh/"
+                target="_blank"
+                aria-label="在线代理croxyproxy"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-unlock" aria-hidden="true"></i>
+              </div>
+              <h3>在线代理croxyproxy</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://doocs.github.io/md/"
+                target="_blank"
+                aria-label="微信Markdown编辑器"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-edit" aria-hidden="true"></i>
+              </div>
+              <h3>微信Markdown编辑器</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.proxysite.com/"
+                target="_blank"
+                aria-label="proxysite"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-unlock" aria-hidden="true"></i>
+              </div>
+              <h3>proxysite</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.serv00.com/"
+                target="_blank"
+                aria-label="serv00"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-server" aria-hidden="true"></i>
+              </div>
+              <h3>serv00</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://github.com/Molunerfinn/PicGo"
+                target="_blank"
+                aria-label="PicGo"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+              </div>
+              <h3>PicGo</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://smms.app/"
+                target="_blank"
+                aria-label="SM.MS"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-image" aria-hidden="true"></i>
+              </div>
+              <h3>SM.MS</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://freeimage.host/"
+                target="_blank"
+                aria-label="FreeImageHost"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-photo-film" aria-hidden="true"></i>
+              </div>
+              <h3>FreeImageHost</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://cobalt.tools/"
+                target="_blank"
+                aria-label="cobalt"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              </div>
+              <h3>cobalt</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://codeium.com/"
+                target="_blank"
+                aria-label="Windsurf"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+              </div>
+              <h3>Windsurf</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://tinywow.com/"
+                target="_blank"
+                aria-label="tinywow"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-free-code-camp" aria-hidden="true"></i>
+              </div>
+              <h3>tinywow</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://paywallbuster.com/"
+                target="_blank"
+                aria-label="付费墙"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-key" aria-hidden="true"></i>
+              </div>
+              <h3>付费墙</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://g.186404.xyz/wallHub/"
+                target="_blank"
+                aria-label="PaywallHub"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-unlock" aria-hidden="true"></i>
+              </div>
+              <h3>PaywallHub</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a href="https://fmhy.net/" target="_blank" aria-label="fmhy"></a>
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-folder-open" aria-hidden="true"></i>
+              </div>
+              <h3>fmhy</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.remove.bg/"
+                target="_blank"
+                aria-label="remove"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-image-portrait" aria-hidden="true"></i>
+              </div>
+              <h3>remove</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://picwish.com/"
+                target="_blank"
+                aria-label="picwish"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-regular fa-image" aria-hidden="true"></i>
+              </div>
+              <h3>picwish</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://zenvideo.qq.com/"
+                target="_blank"
+                aria-label="腾讯智影"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-video" aria-hidden="true"></i>
+              </div>
+              <h3>腾讯智影</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.hidoha.net/"
+                target="_blank"
+                aria-label="免费域名HiDNS"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-fingerprint" aria-hidden="true"></i>
+              </div>
+              <h3>免费域名HiDNS</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://pixabay.com/"
+                target="_blank"
+                aria-label="pixabay"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-pix" aria-hidden="true"></i>
+              </div>
+              <h3>pixabay</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.infinityfree.com/"
+                target="_blank"
+                aria-label="InfinityFree"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-infinity" aria-hidden="true"></i>
+              </div>
+              <h3>InfinityFree</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://anyvoice.net/"
+                target="_blank"
+                aria-label="anyvoice"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-microphone" aria-hidden="true"></i>
+              </div>
+              <h3>anyvoice</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://fish.audio/"
+                target="_blank"
+                aria-label="fish.audio"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-fish" aria-hidden="true"></i>
+              </div>
+              <h3>fish.audio</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://noiz.ai/"
+                target="_blank"
+                aria-label="noizai"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-circle-notch" aria-hidden="true"></i>
+              </div>
+              <h3>noizai</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://hailuoai.video/"
+                target="_blank"
+                aria-label="海螺Ai"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-file-audio" aria-hidden="true"></i>
+              </div>
+              <h3>海螺Ai</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://desec.io/"
+                target="_blank"
+                aria-label="desec免费域名"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-anchor" aria-hidden="true"></i>
+              </div>
+              <h3>desec免费域名</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://lovable.dev/"
+                target="_blank"
+                aria-label="lovable网站生成"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+              </div>
+              <h3>lovable网站生成</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.netlib.re/"
+                target="_blank"
+                aria-label="netlib免费域名"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+              </div>
+              <h3>netlib免费域名</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://zone.id/"
+                target="_blank"
+                aria-label="zone免费域名"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-id-card-clip" aria-hidden="true"></i>
+              </div>
+              <h3>zone免费域名</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://x10hosting.com/"
+                target="_blank"
+                aria-label="x10hosting免费托管"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-ghost" aria-hidden="true"></i>
+              </div>
+              <h3>x10hosting免费托管</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.nodeloc.com/"
+                target="_blank"
+                aria-label="nodeloc社区"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-hashnode" aria-hidden="true"></i>
+              </div>
+              <h3>nodeloc社区</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://same.new/"
+                target="_blank"
+                aria-label="same复制网站"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-copy" aria-hidden="true"></i>
+              </div>
+              <h3>same复制网站</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://claw.cloud/"
+                target="_blank"
+                aria-label="claw容器"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+              </div>
+              <h3>claw容器</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.subeasy.ai/zh-CN"
+                target="_blank"
+                aria-label="subeasy字幕"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-closed-captioning" aria-hidden="true"></i>
+              </div>
+              <h3>subeasy字幕</h3>
+            </div>
+            <div class="link-card" data-category="tools" tabindex="0">
+              <a
+                href="https://www.stormkit.io/"
+                target="_blank"
+                aria-label="Stormkit"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+              </div>
+              <h3>Stormkit</h3>
+            </div>
+          </div>
+        </section>
+        <section id="tech-news" class="category">
+          <h2 class="category-title">
+            <i class="fas fa-newspaper" aria-hidden="true"></i>
+            科技资讯
+          </h2>
+          <div class="resource-grid">
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://www.techcrunch.com"
+                target="_blank"
+                aria-label="TechCrunch"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-newspaper" aria-hidden="true"></i>
+              </div>
+              <h3>TechCrunch</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://www.wired.com"
+                target="_blank"
+                aria-label="Wired"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+              </div>
+              <h3>Wired</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://www.theverge.com"
+                target="_blank"
+                aria-label="The Verge"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-laptop" aria-hidden="true"></i>
+              </div>
+              <h3>The Verge</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://arstechnica.com"
+                target="_blank"
+                aria-label="Ars Technica"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+              </div>
+              <h3>Ars Technica</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://www.engadget.com"
+                target="_blank"
+                aria-label="Engadget"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+              </div>
+              <h3>Engadget</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://scitechdaily.com/"
+                target="_blank"
+                aria-label="科技日报"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-microscope" aria-hidden="true"></i>
+              </div>
+              <h3>科技日报</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://techradar.com"
+                target="_blank"
+                aria-label="TechRadar"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-satellite" aria-hidden="true"></i>
+              </div>
+              <h3>TechRadar</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://b.186404.xyz/"
+                target="_blank"
+                aria-label="科技博客"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-blog" aria-hidden="true"></i>
+              </div>
+              <h3>科技博客</h3>
+            </div>
+            <div class="link-card" data-category="tech-news" tabindex="0">
+              <a
+                href="https://www.cnbeta.com.tw/"
+                target="_blank"
+                aria-label="cnbeta"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              </div>
+              <h3>cnbeta</h3>
+            </div>
+          </div>
+        </section>
+        <section id="cloud-storage" class="category">
+          <h2 class="category-title">
+            <i class="fas fa-cloud" aria-hidden="true"></i>
+            云存储
+          </h2>
+          <div class="resource-grid">
+            <div class="link-card" data-category="cloud-storage" tabindex="0">
+              <a
+                href="https://www.dropbox.com"
+                target="_blank"
+                aria-label="Dropbox"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-dropbox" aria-hidden="true"></i>
+              </div>
+              <h3>Dropbox</h3>
+            </div>
+            <div class="link-card" data-category="cloud-storage" tabindex="0">
+              <a
+                href="https://drive.google.com"
+                target="_blank"
+                aria-label="Google Drive"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-google-drive" aria-hidden="true"></i>
+              </div>
+              <h3>Google Drive</h3>
+            </div>
+            <div class="link-card" data-category="cloud-storage" tabindex="0">
+              <a
+                href="https://onedrive.live.com"
+                target="_blank"
+                aria-label="OneDrive"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+              </div>
+              <h3>OneDrive</h3>
+            </div>
+            <div class="link-card" data-category="cloud-storage" tabindex="0">
+              <a
+                href="https://www.box.com"
+                target="_blank"
+                aria-label="Box"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-box" aria-hidden="true"></i>
+              </div>
+              <h3>Box</h3>
+            </div>
+            <div class="link-card" data-category="cloud-storage" tabindex="0">
+              <a
+                href="https://www.mediafire.com"
+                target="_blank"
+                aria-label="MediaFire"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-file" aria-hidden="true"></i>
+              </div>
+              <h3>MediaFire</h3>
+            </div>
+            <div class="link-card" data-category="cloud-storage" tabindex="0">
+              <a href="https://mega.nz" target="_blank" aria-label="MEGA"></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-cloud-arrow-up" aria-hidden="true"></i>
+              </div>
+              <h3>MEGA</h3>
+            </div>
+            <div class="link-card" data-category="cloud-storage" tabindex="0">
+              <a
+                href="https://mypikpak.com/"
+                target="_blank"
+                aria-label="PikPak"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+              </div>
+              <h3>PikPak</h3>
+            </div>
+          </div>
+        </section>
+        <section id="email" class="category">
+          <h2 class="category-title">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            电子邮箱
+          </h2>
+          <div class="resource-grid">
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://mail.google.com"
+                target="_blank"
+                aria-label="Gmail"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </div>
+              <h3>Gmail</h3>
+            </div>
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://outlook.live.com"
+                target="_blank"
+                aria-label="Outlook"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+              </div>
+              <h3>Outlook</h3>
+            </div>
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://cock.li/"
+                target="_blank"
+                aria-label="cock邮箱"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-envelope-open" aria-hidden="true"></i>
+              </div>
+              <h3>cock邮箱</h3>
+            </div>
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://disroot.org/"
+                target="_blank"
+                aria-label="disroot邮箱"
+              ></a>
+              <div class="icon-wrapper">
+                <i
+                  class="fa-solid fa-envelope-circle-check"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <h3>disroot邮箱</h3>
+            </div>
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://www.protonmail.com"
+                target="_blank"
+                aria-label="ProtonMail"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              </div>
+              <h3>ProtonMail</h3>
+            </div>
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://mail.qq.com"
+                target="_blank"
+                aria-label="QQ邮箱"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-brands fa-qq" aria-hidden="true"></i>
+              </div>
+              <h3>QQ邮箱</h3>
+            </div>
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://librem.one/"
+                target="_blank"
+                aria-label="librem邮箱"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-at" aria-hidden="true"></i>
+              </div>
+              <h3>librem邮箱</h3>
+            </div>
+            <div class="link-card" data-category="email" tabindex="0">
+              <a
+                href="https://www.linshigmail.com/"
+                target="_blank"
+                aria-label="临时谷歌邮箱"
+              ></a>
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-envelopes-bulk" aria-hidden="true"></i>
+              </div>
+              <h3>临时谷歌邮箱</h3>
+            </div>
+          </div>
+        </section>
+        <section id="noResults" class="category"></section>
+      </div>
+    </main>
+    <script src="script.js" defer></script>
+  </body>
+</html>
